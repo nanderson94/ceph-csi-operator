@@ -24,6 +24,7 @@ spec:
       {{ end }}
     {{- end }}
     subVolumeGroup: {{ $clientProfile.cephFs.subVolumeGroup }}
+    radosNamespace: {{ $clientProfile.cephFs.radosNamespace }}
   {{- end }}
   {{- if $clientProfile.rbd }}
   rbd:

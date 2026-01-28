@@ -3,14 +3,14 @@ cephConnections:
   - # Name for the Ceph connection
     name: ""
 
-    # Ceph monitors (key-value pairs, typically IP addresses of the Ceph monitors)
-    monitors: {}
+    # Ceph monitors (list of Ceph monitors for your cluster as IP:Port)
+    monitors: []
 
     # Number of RBD mirror daemons (default is 1)
     rbdMirrorDaemonCount: 1
 
     # Labels to be used for CRUSH location selection
-    crushLocationLabels: {}
+    crushLocationLabels: []
 
 # Configuration for Client Profiles
 clientProfiles:
@@ -30,6 +30,9 @@ clientProfiles:
 
       # Sub-volume group for the CephFS client
       subVolumeGroup: ""
+
+      # Namespace for CephFS backing volume
+      radosNamespace: ""
 
     rbd:
       # Namespace for RADOS block devices

@@ -320,13 +320,12 @@ spec:
   - 10.98.44.171:6789
   - 10.98.44.172:6789
   - 10.98.44.173:6789
-  ReadAffinity:
+  readAffinity:
     crushLocationLabels:
     - kubernetes.io/hostname
     - topology.kubernetes.io/region
     - topology.kubernetes.io/zone
   rbdMirrorDaemonCount: 2
-status: {}
 ```
 
 ### ClientProfile CRD
@@ -345,14 +344,13 @@ metadata:
 spec:
   cephConnectionRef:
     name: ceph-cluster-1
-  cephFS:
+  cephFs:
     subvolumeGroup: csi
     kernelMountOptions: readdir_max_bytes=1048576,norbytes
     fuseMountOptions: debug
     radosNamespace: rados-test-cephfs
   rbd:
     radosNamespace: rados-test
-status: {}
 ```
 
 ### ClientProfileMapping

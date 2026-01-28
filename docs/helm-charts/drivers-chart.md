@@ -46,13 +46,14 @@ The following table lists the configurable parameters of the ceph-csi-drivers ch
 
 | Parameter | Description | Default |
 |-----------|-------------|---------|
-| `cephConnections[0].crushLocationLabels` |  | `{}` |
-| `cephConnections[0].monitors` |  | `{}` |
+| `cephConnections[0].crushLocationLabels` |  | `[]` |
+| `cephConnections[0].monitors` |  | `[]` |
 | `cephConnections[0].name` |  | `""` |
 | `cephConnections[0].rbdMirrorDaemonCount` |  | `1` |
 | `clientProfiles[0].cephConnection.name` |  | `""` |
 | `clientProfiles[0].cephFs.fuseMountOptions` |  | `{}` |
 | `clientProfiles[0].cephFs.kernelMountOptions` |  | `{}` |
+| `clientProfiles[0].cephFs.radosNamespace` |  | `""` |
 | `clientProfiles[0].cephFs.subVolumeGroup` |  | `""` |
 | `clientProfiles[0].name` |  | `""` |
 | `clientProfiles[0].rbd.radosNamespace` |  | `""` |

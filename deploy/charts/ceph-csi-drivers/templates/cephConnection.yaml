@@ -12,10 +12,12 @@ spec:
   - {{ . }}
   {{- end }}
   rbdMirrorDaemonCount: {{ $cephConnection.rbdMirrorDaemonCount }}
+  {{- if $cephConnection.crushLocationLabels }}
   readAffinity:
     crushLocationLabels:
     {{- range $cephConnection.crushLocationLabels }}
     - {{ . }}
     {{- end }}
+  {{- end }}
 {{- end }}
 {{- end }}
